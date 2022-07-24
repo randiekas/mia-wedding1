@@ -39,11 +39,12 @@
 </head>
 <body>
 <div id="app">
-    <div v-if="popup" class="fixed w-full h-full" style="background-image: url(/foto1.jpg); background-size: cover; background-position: center;">
+    <div v-if="popup" class="fixed w-full h-full" style="background-image: url(/foto1.jpg); background-size: cover; background-position: center; z-index:9999">
         <div class="bg-gradient-to-t from-black/25 via-black/25 h-full text-center justify-center flex flex-col">
             <h1 class="mt-1 text-white adlery text-2xl">Yang Terkasih,</h1>
             <h1 class="mt-1 text-white koho text-2xl">Randi Eka Setiawan</h1>
-            <h1 class="mt-1 text-white adlery text-2xl mt-8">Mia & Adji <br> Merayakan Bersamamu!</h1>
+            <h1 class="mt-1 text-white adlery text-4xl mt-8">Mia & Adji</h1>
+            <p class="mt-1 text-white adlery text-xl">Merayakan Bersamamu!</p>
             <button @click="handelPlayBacksound" type="button" class=" mt-4 bg-secondary text-white text-sm mx-4 py-2 px-3 rounded-lg koho">Buka Undangan</button>
         </div>
     </div>
@@ -57,11 +58,11 @@
         </div>
     </div>
     <div style="background-image: url('/foto3.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center justify-center flex flex-col">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
             <h1 class="mt-1 text-white adlery text-3xl">
                 Efesus <span class="koho">4:2</span>
             </h1>
-            <h1 class="mt-1 text-white koho text-2xl">
+            <h1 class="mt-1 text-white koho text-xl">
                 "Hendaklah kamu selalu <br/>
                 rendah hati, lemah lembut,<br/>
                 dan sabar. <br/><br/>
@@ -106,12 +107,12 @@
         </div>
     </div>
     <div style="background-image: url('/foto5.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
+        <div class="bg-gradient-to-t from-black via-black/0 h-full text-center justify-end flex flex-col">
             <h1 class="mt-1 text-white adlery text-3xl">
                 Pemberkatan
             </h1>
             <h1 class="mt-1 text-white koho text-2xl">(Hanya keluarga besar)</h1>
-            <h1 class="mt-4 text-white koho text-2xl">10.00 WIB- Selesai<br/>
+            <h1 class="mt-4 text-white koho">10.00 WIB- Selesai<br/>
 
                 Kapel Hati Kudus Yesus <br/>
                 
@@ -124,11 +125,11 @@
         </div>
     </div>
     <div style="background-image: url('/foto8.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
                 Resepsi Pernikahan
             </h1>
-            <h1 class="mt-4 text-white koho text-2xl">17.30- 20.30<br/>
+            <h1 class="mt-4 text-white koho">17.30- 20.30<br/>
 
                 The Jayakarta Suites Bandung<br/>
                 
@@ -139,26 +140,23 @@
         </div>
     </div>
     <div style="background-image: url('/foto10.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
                 Kado Pernikahan
             </h1>
-            <h1 class="mt-4 text-white koho text-2xl px-4">
+            <h1 class="mt-4 text-white koho px-4">
                 Untuk keluarga dan teman-teman yang ingin
                 memberikan kado, kami akan dengan senang
                 hati menerimanya.
             </h1>
-            <h1 class="mt-8 text-white adlery text-3xl">
-                QR BCA <br/>
-                <span class="koho">7891008612</span> <br/>
-                a/n <br/>
-                Mia Audini
-            </h1>
+            <div class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0 p-1 text-center koho mx-4 mt-2">
+                BCA | 7891008612 | a/n Mia Audini
+            </div>
         </div>
     </div>
     <div style="background-image: url('/foto9.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-2xl">
                 Hari berganti,<br/>
 
                 Hati tak lagi,<br/>
@@ -167,7 +165,7 @@
 
                 Yang tak kenal pisah.
             </h1>
-            <h1 class="mt-4 text-white koho text-1xl">
+            <h1 class="mt-4 text-white koho text-xl">
                 00 Hari | 00 Jam | 00 menit | 00 detik
             </h1>
             <div class="mt-4">
@@ -190,24 +188,24 @@
         <a href="https://www.addevent.com/event/Cr14488040" target="_blank" class="animate-bounce mt-4 bg-secondary text-white text-sm mx-4 py-2 px-3 rounded-lg koho">Konfirmasi Kehadiran</a>
     </div>
     <div style="background-image: url('/foto12.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
                 Terima kasih! <br/>
                 #AdjiMiasOne
             </h1>
         </div>
     </div>
     <div style="background-image: url('/foto13.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
                 Terima kasih! <br/>
                 #AdjiMiasOne
             </h1>
         </div>
     </div>
     <div style="background-image: url('/foto14.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
-        <div class="bg-gradient-to-t from-black/50 via-black/50 h-full text-center justify-center flex flex-col">
-            <h1 class="mt-1 text-white adlery text-3xl">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
                 Terima kasih! <br/>
                 #AdjiMiasOne
             </h1>

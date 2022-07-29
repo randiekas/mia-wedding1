@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>The Wedding of Mia &#038; Adji</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap" rel="stylesheet">
+	
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        @font-face {
+            font-family: Adlery;
+            src: url(adlery.ttf);
+        }
+        .koho{
+            font-family: 'KoHo', sans-serif;
+        }
+        .adlery{
+            font-family: 'Adlery', sans-serif;
+        }
+        .text-primary{
+            color: rgb(84, 114, 96) !important;
+        }
+        .bg-primary{
+            background-color: #D9CCBB !important;
+            color: white;
+        }
+        .bg-secondary{
+            background-color: #DFBF8D !important;
+            color: white;
+        }
+        body{
+            background-color: rgb(225, 232, 237)!important;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-if="popup" class="fixed w-full h-full" style="background-image: url(/foto1.jpg); background-size: cover; background-position: center; z-index:99999999">
+        <div class="bg-gradient-to-b from-black/50 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-xl">Yang Terkasih,</h1>
+            <h1 class="mt-1 text-white koho text-2xl">Randi Eka Setiawan</h1>
+            <h1 class="text-white adlery text-4xl mt-8">Mia & Adji</h1>
+            <p class="mt-1 text-white adlery text-xl">Merayakan Bersamamu!</p>
+            <button @click="handelPlayBacksound" type="button" class=" mt-4 bg-secondary text-white text-sm mx-4 py-2 px-3 rounded-lg koho">Buka Undangan</button>
+        </div>
+    </div>
+    <div style="background-image: url('/foto2.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-t from-black/100 via-black/0 h-full text-center justify-center flex flex-col">
+            <h1 class="mt-1 text-white adlery text-3xl" style="margin-top:27rem">
+                Hari Bahagia Kami <br/>
+                Mia & Adji
+            </h1>
+            <h1 class="animate-bounce mt-8 text-white koho text-2xl">27.08.2022</h1>
+        </div>
+    </div>
+    <div style="background-image: url('/foto3.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-1 text-white adlery text-3xl">
+                Efesus <span class="koho">4:2</span>
+            </h1>
+            <h1 class="mt-1 text-white koho text-l">
+                "Hendaklah kamu selalu <br/>
+                rendah hati, lemah lembut,<br/>
+                dan sabar. <br/>
+                Tunjukkanlah kasihmu<br/>
+                dalam hal saling<br/>
+                membantu. "<br/>
+            </h1>
+        </div>
+    </div>
+    <div class="py-6 px-4 sm:p-6 md:py-10 md:px-8 w-full h-screen">
+        <h1 class="adlery text-primary text-center text-2xl mb-10">Bride & Groom</h1>
+        <img src="/foto7.jpg" alt="" class="w-full h-60 object-cover rounded-sm" loading="lazy">
+        <div class="flex flex-row text-center text-primary koho">
+            <div class="mt-4 w-50">
+                <h1 class="text-xl">
+                    Mia Audini<br/>
+                </h1>
+                <p class="text-sm">
+                    Putri dari<br/>
+                    Bapak Agustinus
+                    Appang
+
+                    & Ibu Martha
+                    Sanda Lembang
+                </p>
+            </div>
+            <div class="mt-4 w-50">
+                <h1 class="text-xl">
+                    Laurentius S.Adji
+                </h1>
+                <p class="text-sm">
+                    Putra dari<br/>
+    
+                    Bapak Herman
+                    Yoseph Mudjiono
+    
+                    & Ibu Martha
+                    Sumiyarti
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="background-image: url('/foto5.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-2xl">
+                Pemberkatan Pernikahan
+            </h1>
+            <h1 class="mt-1 text-white koho text-xl">(Hanya keluarga besar)</h1>
+            <h1 class="mt-4 text-white koho text-sm">
+                27.08.22 <br/>
+                10.00 WIB- Selesai<br/>
+
+                Kapel Hati Kudus Yesus <br/>
+                
+                (St. Borromeus)<br/>
+                
+                Jl. Surya Kencana No.3,
+                Lebakgede, Kota Bandung
+            </h1>
+            <a href="https://goo.gl/maps/u9bjQo2UBGihVAZz7" target="_blank" class="animate-bounce mt-4 bg-secondary text-white text-sm mx-4 py-2 px-3 rounded-lg koho">Lihat Lokasi</a>
+        </div>
+    </div>
+    <div style="background-image: url('/foto8.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
+                Resepsi Pernikahan
+            </h1>
+            <h1 class="mt-4 text-white koho text-sm">
+                27.08.22 <br/>
+                17.30-20.30<br/>
+
+                The Jayakarta Suites Bandung<br/>
+                Jl. Ir. H. Juanda No.381A, Dago, Kota
+                Bandung
+            </h1>
+            <a href="https://goo.gl/maps/Rr5bJd7N9tpaZZzV9" target="_blank" class="animate-bounce mt-4 bg-secondary text-white text-sm mx-4 py-2 px-3 rounded-lg koho">Lihat Lokasi</a>
+        </div>
+    </div>
+    <div style="background-image: url('/foto10.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
+                Kado Pernikahan
+            </h1>
+            <h1 class="mt-4 text-white koho px-4">
+                Untuk keluarga dan teman-teman yang ingin
+                memberikan kado, kami akan dengan senang
+                hati menerimanya.
+            </h1>
+            <div class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0 p-1 text-center koho mx-4 mt-2">
+                BCA | 7891008612 | a/n Mia Audini
+            </div>
+        </div>
+    </div>
+    <div style="background-image: url('/foto9.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-12 text-white adlery text-xl">
+                Hari berganti, Hati tak lagi,<br/>
+                Kita adalah kisah, Yang tak kenal pisah.
+            </h1>
+            <h1 class="mt-4 text-white koho text-xl">
+                00 Hari | 00 Jam | 00 menit | 00 detik
+            </h1>
+            <div class="mt-4">
+                <a title="Add to Calendar" class="addeventatc" data-id="Cr14488040" href="https://www.addevent.com/event/Cr14488040" target="_blank">Tambahkan Ke Kalender</a>
+                <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+            </div>
+            
+        </div>
+    </div>
+    <div class="py-6 px-4 sm:p-6 md:py-10 md:px-8 w-full h-screen flex flex-col text-center text-primary">
+        <img src="/foto11.jpg" alt="" class="w-full h-60 object-cover rounded-sm" loading="lazy">
+        <h1 class="mt-8 adlery text-2xl">
+            RSVP:
+        </h1>
+        <h1 class="mt-4 koho">
+            Kami tidak sabar merayakan hari <br/>
+            pernikahan kami bersama <br/>
+            Bapak/Ibu/Saudara/i,<br/>
+        </h1>
+        <a href="https://www.addevent.com/event/Cr14488040" target="_blank" class="animate-bounce mt-4 bg-secondary text-white text-sm mx-8 py-2 px-3 rounded-lg koho">Konfirmasi Kehadiran</a>
+    </div>
+    <div style="background-image: url('/foto14.jpg'); background-size: cover; background-position: center;" class="w-full h-screen">
+        <div class="bg-gradient-to-b from-black/100 via-black/0 h-full text-center flex flex-col">
+            <h1 class="mt-8 text-white adlery text-3xl">
+                Terima kasih! <br/>
+                #AdjiMiasOne
+            </h1>
+        </div>
+    </div>
+</div>
+<audio src="/backsound.mp3" id="backsound"/>
+<script>
+const { createApp } = Vue
+
+createApp({
+    data() {
+        return {
+            popup: true,
+        }
+    },
+    methods:{
+        handelPlayBacksound: function(){
+            document.getElementById("backsound").play();
+            this.popup=false
+        }
+    }
+}).mount('#app')
+</script>
+</body>
+</html>

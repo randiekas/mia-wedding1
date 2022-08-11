@@ -5530,7 +5530,7 @@ Bapak/Ibu/Saudara/i,
 											</div>
 
 											<div class="lws-dear">Dear</div>
-											<div class="lws-name">Nama Tamu</div>
+											<div class="lws-name" id="nama-tamu">Nama Tamu</div>
 											<div class="lws-button-wrapper">
 												<button class="elementor-button">
 													<span>
@@ -5548,6 +5548,11 @@ Bapak/Ibu/Saudara/i,
 			</div>
 		</section>
 	</div>
+	<script>
+		const urlSearchParams = new URLSearchParams(window.location.search);
+		const params = Object.fromEntries(urlSearchParams.entries());
+		document.getElementById("nama-tamu").innerHTML = params.untuk.toUpperCase()
+	</script>
 	<link rel='stylesheet' id='elementor-gallery-css'
 		href='https://queeninvitationid.com/wp-content/plugins/elementor/assets/lib/e-gallery/css/e-gallery.min.css?ver=1.2.0'
 		media='all' />

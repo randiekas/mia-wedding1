@@ -5129,12 +5129,12 @@ Bapak/Ibu/Saudara/i,
 													required="1" value="">
 											</div>
 											<div class="landingstarwedding-form-field-nama">
-												<label for="landingstarwedding-form-nama-7a8b5c9"
+												<label for="landingstarwedding-form-kota-7a8b5c9"
 													class="elementor-screen-only">
 													Kota </label>
-												<input type="text" name="landingstarwedding-form-nama"
-													class="landingstarwedding-form-nama"
-													id="landingstarwedding-form-nama-7a8b5c9" placeholder="Kota"
+												<input type="text" name="landingstarwedding-form-kota-7a8b5c9"
+													class="landingstarwedding-form-kota"
+													id="landingstarwedding-form-kota-7a8b5c9" placeholder="Kota"
 													required="1" value="">
 											</div>
 											<!-- <div class="landingstarwedding-form-field-nama">
@@ -5185,51 +5185,46 @@ Bapak/Ibu/Saudara/i,
 
 												<label class="to-select-option">
 													<input type="radio"
-														name="landingstarwedding-form-option landingstarwedding-form-option"
+														name="landingstarwedding-form-option landingstarwedding-form-kehadiran"
 														class="landingstarwedding-form-option landingstarwedding-form-option"
 														required="1" 
 														id="landingstarwedding-form-option-7a8b5c91"
 														checked
-														value="Hadir">Hadir
+														value="Hadir">Akan Hadir
 												</label>
 												<label class="to-select-option">
 													<input type="radio"
-														name="landingstarwedding-form-option landingstarwedding-form-option"
+														name="landingstarwedding-form-option landingstarwedding-form-kehadiran"
 														class="landingstarwedding-form-option landingstarwedding-form-option"
 														required="1" 
 														id="landingstarwedding-form-option-7a8b5c91"
-														checked
 														value="Tidak Hadir">Tidak hadir
 												</label>
 
 											</div>
 											<div class="landingstarwedding-form-field-submit">
-												<button type="submit" class="landingstarwedding-form-button">RSVP via Whatsapp </button>
+												<button type="button" onclick="kirimWA()" class="landingstarwedding-form-button">RSVP via Whatsapp </button>
 											</div>
 										</div>
 									</form>
 								</div>
 								<script>
-									(function () {
-										'use strict';
-										window.addEventListener('load', function () {
-											var wa_form = document.getElementById('landingstarwedding-wa-form-7a8b5c9');
-											wa_form.addEventListener("change", function () {
-												var t, e = this.getElementsByClassName("landingstarwedding-form-option"),
-													a = this.getAttribute("data-waapi");
-												if (a && e.length > 1) {
-													for (var r = 0; r < e.length; r++) "radio" === e[r].type && e[r].checked &&
-														(t = e[r].value);
-													t && (a = a.replace("%25option%25", encodeURI(t))), this.setAttribute(
-														"data-waapi", a)
-												}
-											}, !1);
-											wa_form.addEventListener('submit', function (event) {
-												event.preventDefault();
-												event.stopPropagation();
-											}, false);
-										}, false);
-									})();
+									function kirimWA(){
+										let phone = '6287822894389'
+										let nama = document.getElementById('landingstarwedding-form-nama-7a8b5c9').value
+										let tamu = document.querySelector('input[name="no_guest"]:checked').value
+										let hadir = document.querySelector('input[name="landingstarwedding-form-option landingstarwedding-form-kehadiran"]:checked').value
+										let kota = document.getElementById('landingstarwedding-form-kota-7a8b5c9').value
+										let pesan = ''
+										if(hadir == 'Hadir'){
+											pesan = `Saya ${nama} dari kota ${kota}, Akan hadir dengan suka cita beserta ${tamu} tamu`
+										}else{
+											pesan = `Saya ${nama} dari kota ${kota}, tidak akan hadir`
+										}
+										pesan
+										
+										window.location.href=`https://api.whatsapp.com/send?phone=${phone}&text=${pesan}`
+									}
 								</script>
 							</div>
 						</div>

@@ -16,29 +16,12 @@
 <button type="button" onclick='kirimWA("081241031478", "Bapak Zeth Tulak Lintin & Ny.")' class="landingstarwedding-form-button">Bapak Zeth Tulak Lintin & Ny.	</button> <br/>
 <button type="button" onclick='kirimWA("082173098234", "Bapak Pdt Semuel Lobo S.Th & Ny.")' class="landingstarwedding-form-button">Bapak Pdt Semuel Lobo' S.Th & Ny.	</button> <br/>
 <button type="button" onclick='kirimWA("081288670318", "Bapak Fred T. Batoarung, SE & Ny.")' class="landingstarwedding-form-button">Bapak Fred T. Batoarung, SE & Ny.	</button> <br/>
+<button type="button" onclick='kirimWA("085212225307", "Bapak Yan Lelepadang & Ny.")' class="landingstarwedding-form-button">Bapak Yan Lelepadang & Ny. </button> <br/>
 
 <script>
     function kirimWA(phone, nama){
-        let pesan = `Kepada Yth.
-*${nama}*
-
-*_Tuhan membuat segala sesuatu indah pada waktunya._*
-
-Dengan segala kerendahan hati & ucapan syukur atas kasih Tuhan, kami mengundang Bapak/Ibu pada:
-
-*_Sabtu, 27 Agustus 2022_*
-
-- *_Pemberkatan: 10.00_*
-*_(hanya keluarga besar)_*
-- *_Resepsi: 17.30-20.30_*
-
-Mohon *konfirmasi kehadiran*:
-https://invitation-mia-adji.pages.dev/?untuk=${nama}
-
-Note: mohon untuk tidak menyebarluaskan undangan ini selain dari pihak pengantin, *terima kasih.*
-
-*_#AdjiMiasOne_*`
-        pesan = encodeURIComponent(pesan)
+        nama = encodeURI(nama)
+        let pesan = `Kepada%20Yth.%0A*${nama}*%0A%0A*_Tuhan%20membuat%20segala%20sesuatu%20indah%20pada%20waktunya._*%0A%0ADengan%20segala%20kerendahan%20hati%20%26%20ucapan%20syukur%20atas%20kasih%20Tuhan%2C%20kami%20mengundang%20Bapak%2FIbu%20pada%3A%0A%0A*_Sabtu%2C%2027%20Agustus%202022_*%0A%0A-%20*_Pemberkatan%3A%2010.00_*%0A*_(hanya%20keluarga%20besar)_*%0A-%20*_Resepsi%3A%2017.30-20.30_*%0A%0AMohon%20*konfirmasi%20kehadiran*%3A%0Ahttps%3A%2F%2Finvitation-mia-adji.pages.dev%2F%3Funtuk%3D${nama}%0A%0ANote%3A%20mohon%20untuk%20tidak%20menyebarluaskan%20undangan%20ini%20selain%20dari%20pihak%20pengantin%2C%20*terima%20kasih.*%0A%0A*_%23AdjiMiasOne_*`
         window.location.href=`https://api.whatsapp.com/send?phone=${phone}&text=${pesan}`
     }
 </script>

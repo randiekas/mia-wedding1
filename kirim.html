@@ -21,6 +21,7 @@
 
 <script>
     function kirimWA(phone, nama){
+        nama = encodeURI(nama)
         let pesan = `Kepada Yth.
 *${nama}*
 

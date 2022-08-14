@@ -21,7 +21,7 @@
 
 <script>
     function kirimWA(phone, nama){
-        nama = encodeURI(nama)
+        let namaurl = encodeURI(nama)
         let pesan = `Kepada Yth.
 *${nama}*
 
@@ -36,7 +36,7 @@ Dengan segala kerendahan hati & ucapan syukur atas kasih Tuhan, kami mengundang 
 - *_Resepsi: 17.30-20.30_*
 
 Mohon *konfirmasi kehadiran*:
-https://invitation-mia-adji.pages.dev/?untuk=${nama}
+https://invitation-mia-adji.pages.dev/?untuk=${namaurl}
 
 Note: mohon untuk tidak menyebarluaskan undangan ini selain dari pihak pengantin, *terima kasih.*
 
